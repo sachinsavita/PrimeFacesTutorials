@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+
+<html lang="en"
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:a4j = "http://richfaces.org/a4j"> 
+    
+<h:head>
+  <title>InputText Form</title> 
+  
+</h:head>
+
+<h:body>
+<h2>Prime Input Text Area Demo </h2>
+     
+     <h:form id = "form"> 
+     <p:inputTextarea rows="7" cols="40" completeMethod="#{TextArea.populateTextArea}" queryDelay="1000" minQueryLength="1"></p:inputTextarea><br/>
+     
+     <p:inputTextarea rows="7" cols="30" autoResize="false"></p:inputTextarea><br/>
+     
+     <p:inputTextarea rows="5" cols="20" counter="display" maxlength="20" counterTemplate="{0} characters remaining.." autoResize=""></p:inputTextarea><br/>
+       
+     
+     <h:outputText id = "display"></h:outputText>  
+      </h:form> 
+</h:body>
+
+</html>

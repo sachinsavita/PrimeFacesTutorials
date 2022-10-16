@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+
+<html lang="en"
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:a4j = "http://richfaces.org/a4j"> 
+    
+<h:head>
+  <title>InputText Form</title>
+  
+</h:head>
+
+<h:body>
+     <!-- <InputText> without bean -->
+     <h2>Input Text</h2>
+     <h:outputText Value="Enter Text... "></h:outputText>
+     <h:inputText id="txtName" rendered="true" value="Sachin" require="true"></h:inputText>
+     
+      <hr/>
+
+     <!-- <InputText> with bean -->
+     <h:form id = "form"> 
+     <h2>Enter your Message: </h2>
+         <h:inputText value = "#{InputText.message}"> 
+            <a4j:AJAX keydown="true" render = "ShowMessage" /> 
+         </h:inputText> 
+         
+         <h:outputText value = "#{InputText.message}" id = "ShowMessage" 
+            style = "animation-duration"/> 
+      </h:form> 
+</h:body>
+
+</html>
