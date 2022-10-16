@@ -6,14 +6,14 @@
 	xmlns:f="http://xmlns.jcp.org/jsf/core">
 
 <h:head>
-	<title>SelectOneRadioDemo</title>
+	<title>SelectCheckBoxMenueDemo</title>
 </h:head>
 
 <h:body>
 	<h:form>
-		<h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="5">
+		<h:panelGrid columns="2" cellpadding="5">
              <!-- Basic -->
-			<h:outputLabel for="menu" value="Basic: "></h:outputLabel>
+			<h:outputLabel for="menu" value="Basic: "/>
 			<p:selectCheckboxMenu id="menu" value="#{SCBM.selectedColors}"
 				label="Colors" updateLabel="true" filter="true"
 				filterMatchMode="startWith" panelStyle="width:250px">
@@ -22,7 +22,7 @@
 
 			</p:selectCheckboxMenu>
 			<!-- Multiple -->
-			<h:outputLabel for="multiple" value="Multiple: "></h:outputLabel>
+			<h:outputLabel for="multiple" value="Multiple: "/>
 			<p:selectCheckboxMenu id="multiple" value="#{SCBM.selectedColors2}"
 				label="Cities" multiple="true" filter="true"
 				filterMatchMode="startWith" panelStyle="width:250px">
@@ -30,6 +30,7 @@
 			<f:selectItems value="#{SCBM.colors}"></f:selectItems>
 
 			</p:selectCheckboxMenu>
+			
 
 		</h:panelGrid>
 
